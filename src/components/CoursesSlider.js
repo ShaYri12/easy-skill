@@ -11,6 +11,11 @@ const courses = [
   { id: 3, src: BackendDev, alt: "Back End Development" },
   { id: 4, src: BusinessDev, alt: "Business Development" },
   { id: 5, src: CyberSecurity, alt: "Cyber Security" },
+  { id: 1, src: Animation, alt: "2D-3D Animation" },
+  { id: 2, src: AppDev, alt: "Application Development" },
+  { id: 3, src: BackendDev, alt: "Back End Development" },
+  { id: 4, src: BusinessDev, alt: "Business Development" },
+  { id: 5, src: CyberSecurity, alt: "Cyber Security" },
 ];
 
 const CoursesSlider = () => {
