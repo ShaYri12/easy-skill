@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Phone from "../assets/icons/phone.svg";
+
 import Logo from "../assets/Logo.svg";
 import WhiteLogo from "../assets/white-logo.svg";
 import { FaBarsStaggered } from "react-icons/fa6";
@@ -7,6 +7,7 @@ import { FaTimes } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { BiPhone } from "react-icons/bi";
 import { HiMiniArrowRight } from "react-icons/hi2";
+import { PiPhoneCall } from "react-icons/pi";
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -68,7 +69,9 @@ const Header = () => {
           </button>
         </div>
 
-        <img src={Phone} alt="Phone" className="block xxl:hidden" />
+        <span className="min-w-[26px] min-h-[26px] text-white">
+          <PiPhoneCall size={26} />
+        </span>
       </div>
 
       {/* Mobile Drawer */}

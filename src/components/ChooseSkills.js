@@ -26,7 +26,7 @@ import cred from "../assets/cred.svg";
 import udaan from "../assets/udaan.svg";
 import sharechat from "../assets/sharechat.svg";
 
-import RightArrow from "../assets/icons/right-arrow.svg";
+import { HiMiniArrowRight } from "react-icons/hi2";
 
 // Skills Data
 const skillsData = [
@@ -214,7 +214,7 @@ const ChooseSkills = () => {
           <p className="text-white text-base md:text-xl font-bold leading-[10px]">
             Book YOUR SEAT Now
           </p>
-          <img src={RightArrow} alt="RightArrow" />
+          <HiMiniArrowRight size={24} />
         </div>
       </div>
     </section>
