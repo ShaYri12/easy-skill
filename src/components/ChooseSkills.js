@@ -76,7 +76,7 @@ const ChooseSkills = () => {
   return (
     <section className="px-4 xxl:px-20 py-8 xxl:py-20">
       <div>
-        <h2 className="text-[30px] md:text-[40px] leading-[22px] md:leading-[44px] text-center font-bold mb-[12px] md:mb-10">
+        <h2 className="text-[30px] md:text-[40px] leading-[22px] md:leading-[44px] text-center font-bold mb-[14px] md:mb-10">
           Why Choose EasySkill
         </h2>
 
@@ -205,16 +205,20 @@ const ChooseSkills = () => {
         </ul>
       </div>
 
-      <div className="max-w-[682px] w-full mx-auto bg-[#1A8F25] rounded md:rounded-lg py-3 px-4 md:px-6 flex flex-col gap-2 cursor-pointer items-center justify-center">
-        <p className="text-white tracking-[1.2%] font-semibold text-center text-[10px] md:text-base uppercase">
+      <div className="max-w-[682px] w-full mx-auto bg-[#1A8F25] rounded md:rounded-lg py-[12px] px-4 md:px-6 flex flex-col md:gap-2 gap-[4px] cursor-pointer items-center justify-center">
+        <p className="text-white tracking-[1.2%] font-[600] text-center md:text-[16px] leading-[12px] text-[12px] uppercase">
           get free career counseling from experts
         </p>
 
         <div className="flex items-center gap-1">
-          <p className="text-white text-base md:text-xl font-bold leading-[10px]">
+          <p className="text-white uppercase text-[18px] md:text-[24px] font-[700] leading-[20px] tracking-[1.2%]">
             Book YOUR SEAT Now
           </p>
-          <HiMiniArrowRight size={24} />
+          <HiMiniArrowRight
+            className="md:text-[24px] text-[20px]"
+            color="white"
+            strokeWidth={0.6}
+          />
         </div>
       </div>
     </section>

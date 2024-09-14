@@ -1,21 +1,18 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Faqs from "./components/Faqs";
-import ChooseSkills from "./components/ChooseSkills";
-import OurCourses from "./components/OurCourses";
-import CoursesSlider from "./components/CoursesSlider";
-import OurRecognition from "./components/OurRecognition";
+import Home from "./pages/Home";
+import Thankyou from "./pages/Thankyou";
 
 function App() {
   return (
     <div>
       <Header />
-      <OurRecognition />
-      <CoursesSlider />
-      <OurCourses />
-      <ChooseSkills />
-      <Faqs />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/thank-you" element={<Thankyou />} />
+      </Routes>
       <Footer />
     </div>
   );

@@ -12,17 +12,17 @@ const awardsData = [
 const OurRecognition = () => {
   return (
     <section className="px-4 xxl:px-20 py-8 xxl:py-20">
-      <h2 className="text-[30px] md:text-[40px] px-4 xxl:px-20 leading-[22px] md:leading-[44px] text-center font-bold mb-[12px] md:mb-10">
+      <h2 className="text-[30px] md:text-[40px] px-4 xxl:px-20 leading-[22px] md:leading-[44px] text-center font-bold mb-[20px] md:mb-10">
         Our Recognition
       </h2>
       <div className="flex items-center justify-center md:gap-[48px] gap-[20px]">
         {awardsData.map((award) => (
           <div
             key={award.id}
-            className="w-[190.3px] h-[200px] relative flex items-center justify-center"
+            className="max-w-[190.3px] max-h-[200px] relative flex items-center justify-center"
           >
             <img
-              className="object-contain" // Centers the image within the container
+              className="object-contain h-full w-full" // Centers the image within the container
               src={award.src}
               alt={award.alt}
             />

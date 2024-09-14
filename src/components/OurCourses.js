@@ -117,7 +117,7 @@ const OurCourses = () => {
   return (
     <section className="px-4 xxl:px-20 py-8 xxl:py-20">
       <div>
-        <h2 className="text-[30px] md:text-[40px] px-4 xxl:px-20 leading-[22px] md:leading-[44px] text-center font-bold mb-[12px] md:mb-10">
+        <h2 className="text-[30px] md:text-[40px] px-4 xxl:px-20 leading-[22px] md:leading-[44px] text-center font-bold mb-[14px] md:mb-10">
           Our Courses
         </h2>
 
