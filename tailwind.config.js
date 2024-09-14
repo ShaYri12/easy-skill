@@ -4,13 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary-100": "#15508B"
+        "primary-100": "#15508B",
       },
 
       screens: {
-        "xxl": "1150px"
-      }
+        sxl: "1286px",
+        xxl: "1150px",
+      },
     },
   },
   plugins: [],
-}
+};

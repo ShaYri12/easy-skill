@@ -205,7 +205,7 @@ const ChooseSkills = () => {
         </ul>
       </div>
 
-      <div className="max-w-[682px] w-full mx-auto bg-[#1A8F25] rounded md:rounded-lg py-[12px] px-4 md:px-6 flex flex-col md:gap-2 gap-[4px] cursor-pointer items-center justify-center">
+      <button className="max-w-[682px] w-full mx-auto bg-[#1A8F25] rounded md:rounded-lg py-[12px] px-4 md:px-6 flex flex-col md:gap-2 gap-[4px] cursor-pointer items-center justify-center">
         <p className="text-white tracking-[1.2%] font-[600] text-center md:text-[16px] leading-[12px] text-[12px] uppercase">
           get free career counseling from experts
         </p>
@@ -220,7 +220,7 @@ const ChooseSkills = () => {
             strokeWidth={0.6}
           />
         </div>
-      </div>
+      </button>
     </section>
   );
 };
