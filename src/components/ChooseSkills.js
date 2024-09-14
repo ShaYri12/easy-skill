@@ -74,9 +74,9 @@ const skillsData = [
 
 const ChooseSkills = () => {
   return (
-    <section className="p-4 xxl:p-20">
+    <section className="px-4 xxl:px-20 py-8 xxl:py-20">
       <div>
-        <h2 className="text-[30px] md:text-[40px] leading-[22px] md:leading-[44px] text-center font-bold mb-[20px] md:mb-10">
+        <h2 className="text-[30px] md:text-[40px] leading-[22px] md:leading-[44px] text-center font-bold mb-[12px] md:mb-10">
           Why Choose EasySkill
         </h2>
 

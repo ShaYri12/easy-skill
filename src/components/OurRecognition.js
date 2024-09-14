@@ -11,8 +11,8 @@ const awardsData = [
 
 const OurRecognition = () => {
   return (
-    <section className="p-4 xxl:p-20">
-      <h2 className="text-[30px] md:text-[40px] px-4 xxl:px-20 leading-[22px] md:leading-[44px] text-center font-bold mb-[20px] md:mb-10">
+    <section className="px-4 xxl:px-20 py-8 xxl:py-20">
+      <h2 className="text-[30px] md:text-[40px] px-4 xxl:px-20 leading-[22px] md:leading-[44px] text-center font-bold mb-[12px] md:mb-10">
         Our Recognition
       </h2>
       <div className="flex items-center justify-center md:gap-[48px] gap-[20px]">

@@ -20,11 +20,11 @@ const courses = [
 
 const CoursesSlider = () => {
   return (
-    <section className="py-4 xxl:py-20">
-      <h2 className="text-[30px] md:text-[40px] px-4 xxl:px-20 leading-[22px] md:leading-[44px] text-center font-bold mb-[20px] md:mb-10">
+    <section className="py-8 xxl:py-20">
+      <h2 className="text-[30px] md:text-[40px] px-4 xxl:px-20 leading-[22px] md:leading-[44px] text-center font-bold mb-[12px] md:mb-10">
         Our Courses
       </h2>
-      <div className="w-full overflow-x-auto ps-4 xxl:ps-20">
+      <div className="w-full overflow-x-auto ps-4 xxl:ps-20 scrollbar-hide">
         <div className="flex gap-4">
           {courses.map((course) => (
             <div
