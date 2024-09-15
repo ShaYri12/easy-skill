@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import EmploymentGuarantee from "../assets/icons/1.svg";
 import RealWorldTraining from "../assets/icons/2.svg";
@@ -27,6 +27,7 @@ import udaan from "../assets/udaan.svg";
 import sharechat from "../assets/sharechat.svg";
 
 import { HiMiniArrowRight } from "react-icons/hi2";
+import BookSeatModal from "./BookSeatModal";
 
 // Skills Data
 const skillsData = [
@@ -73,6 +74,10 @@ const skillsData = [
 ];
 
 const ChooseSkills = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <section className="px-4 xxl:px-20 py-8 xxl:py-20">
       <div>
@@ -205,7 +210,10 @@ const ChooseSkills = () => {
         </ul>
       </div>
 
-      <button className="max-w-[682px] w-full mx-auto bg-[#1A8F25] rounded md:rounded-lg py-[12px] px-4 md:px-6 flex flex-col md:gap-2 gap-[4px] cursor-pointer items-center justify-center">
+      <button
+        onClick={openModal}
+        className="max-w-[682px] w-full mx-auto bg-[#1A8F25] rounded md:rounded-lg py-[12px] px-4 md:px-6 flex flex-col md:gap-2 gap-[4px] cursor-pointer items-center justify-center"
+      >
         <p className="text-white tracking-[1.2%] font-[600] text-center md:text-[16px] leading-[12px] text-[12px] uppercase">
           get free career counseling from experts
         </p>
@@ -221,6 +229,8 @@ const ChooseSkills = () => {
           />
         </div>
       </button>
+      {/* Modal component - conditionally rendered */}
+      <BookSeatModal isOpen={isModalOpen} onClose={closeModal} />
     </section>
   );
 };

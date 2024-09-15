@@ -24,6 +24,16 @@ body {
   }
 }
 
+@media screen and (max-width: 399px) {
+  .review {
+    flex-direction: column;
+  }
+  .review-btn {
+    justify-content: center;
+    margin-top: 12px;
+  }
+}
+
 /* Custom scrollbar hide */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
@@ -31,4 +41,11 @@ body {
 .scrollbar-hide {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+.ellipsis-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }

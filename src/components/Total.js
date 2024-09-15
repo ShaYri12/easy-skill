@@ -11,6 +11,7 @@ const Total = () => {
           <img
             className="md:w-[48px] w-[32px] md:h-[48px] h-[32px]"
             src={OfficeWorker}
+            alt="icon"
           />
         </span>
         <div className="flex flex-col gap-[2px] text-white">
@@ -27,6 +28,7 @@ const Total = () => {
           <img
             className="md:w-[48px] w-[32px] md:h-[48px] h-[32px]"
             src={ClassLesson}
+            alt="icon"
           />
         </span>
         <div className="flex flex-col gap-[2px] text-white">
@@ -43,6 +45,7 @@ const Total = () => {
           <img
             className="md:w-[48px] w-[32px] md:h-[48px] h-[32px]"
             src={MapPin}
+            alt="icon"
           />
         </span>
         <div className="flex flex-col gap-[2px] text-white">

@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroImg from "../assets/hero-img.png";
 import { HiMiniArrowRight } from "react-icons/hi2";
 import Line from "../assets/thankyou-line.svg";
 import G from "../assets/icons/G.svg";
 import Jd from "../assets/icons/jd.svg";
 import { FaStar } from "react-icons/fa6";
+import BookSeatModal from "./BookSeatModal";
 
 const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <section className="flex flex-col md:flex-row md:gap-[24px] items-center justify-between px-4 xxl:px-12 md:py-[56px] py-[16px] bg-white">
       <div className="w-full md:w-1/2 text-left md:order-1 order-2">
@@ -17,14 +22,17 @@ const Hero = () => {
           <h1 className="md:text-[64px] w-max text-[32px] font-[800] md:leading-[70.4px] leading-[32px]">
             IT Learning
           </h1>
-          <img className="md:w-[319px] w-[141px] mt-[3px]" src={Line} />
+          <img className="md:w-[319px] w-[141px] mt-[3px]" src={Line} alt="" />
 
           <p className="text-[#15508B] md:text-[24px] text-[20px] leading-[20px] font-[700] md:mt-[11px] mt-[2px]">
             for Assured Earnings
           </p>
         </div>
 
-        <button className="max-w-[682px] w-full mx-auto bg-[#1A8F25] rounded-[4px] md:rounded-lg md:mt-[24px] mt-[20px] py-[12px] px-4 flex flex-col md:gap-2 gap-[4px] cursor-pointer items-center justify-center">
+        <button
+          onClick={openModal}
+          className="max-w-[682px] w-full mx-auto bg-[#1A8F25] rounded-[4px] md:rounded-lg md:mt-[24px] mt-[20px] py-[12px] px-4 flex flex-col md:gap-2 gap-[4px] cursor-pointer items-center justify-center"
+        >
           <p className="text-white tracking-[1.2%] font-[600] text-center lg:text-[16px] md:text-[1.7vw] leading-[12px] text-[12px] uppercase">
             get free career counseling from experts
           </p>
@@ -40,6 +48,9 @@ const Hero = () => {
             />
           </div>
         </button>
+
+        {/* Modal component - conditionally rendered */}
+        <BookSeatModal isOpen={isModalOpen} onClose={closeModal} />
 
         <p className="text-black opacity-[0.6] lg:text-[20px] md:text-[17px] text-[14px] md:leading-[27.32px] leading-[16px] font-[400] md:mt-[24px] mt-[20px]">
           Enroll in the Best Python Training Institute for Comprehensive Python
