@@ -14,7 +14,7 @@ const Home = () => {
       <Hero />
       <Total />
       <OurRecognition />
-      <CoursesSlider />
+      {/*<CoursesSlider />*/}
       <OurCourses />
       <ChooseSkills />
       <Faqs />

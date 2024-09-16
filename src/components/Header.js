@@ -48,7 +48,7 @@ const Header = () => {
     <header className="sticky top-0 xxl:bg-white py-6 flex items-center px-4 sxl:px-20 bg-[#15508B] relative z-[50] shadow">
       <div className="flex items-center justify-between gap-2 w-full">
         <nav className="flex-1 hidden xxl:flex">
-          <ul className="flex items-center">
+          {/*<ul className="flex items-center">
             <li>
               <NavLink
                 to="/"
@@ -118,7 +118,7 @@ const Header = () => {
                 Placements
               </NavLink>
             </li>
-          </ul>
+          </ul>*/}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -160,7 +160,7 @@ const Header = () => {
             <FaTimes className="text-white text-2xl" />
           </button>
         </div>
-        <ul className="flex flex-col items-start gap-4 p-4">
+        {/*<ul className="flex flex-col items-start gap-4 p-4">
           <li>
             <NavLink
               to="/"
@@ -219,7 +219,7 @@ const Header = () => {
               Placements
             </NavLink>
           </li>
-        </ul>
+        </ul>*/}
         <div className="h-[1px] border-t border-dashed w-[87%] mx-auto opacity-[0.8]"></div>
         <div className="flex flex-col items-start gap-4 p-4">
           <button className="border border-white flex items-center md:gap-2 gap-1 rounded-lg py-2 px-4 text-lg font-medium text-white">
