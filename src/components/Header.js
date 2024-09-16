@@ -1,48 +1,48 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import Logo from "../assets/Logo.svg";
 import WhiteLogo from "../assets/white-logo.svg";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
-import { MdKeyboardArrowDown } from "react-icons/md";
+// import { MdKeyboardArrowDown } from "react-icons/md";
 import { BiPhone } from "react-icons/bi";
 import { HiMiniArrowRight } from "react-icons/hi2";
 import { PiPhoneCall } from "react-icons/pi";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // const dropdownRef = useRef(null);
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
 
-  const closeDrawer = () => {
-    setIsDrawerOpen(false);
-  };
+  // const closeDrawer = () => {
+  //   setIsDrawerOpen(false);
+  // };
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+  // const toggleDropdown = () => {
+  //   setIsDropdownOpen(!isDropdownOpen);
+  // };
 
-  const closeDropdown = () => {
-    setIsDropdownOpen(false);
-  };
+  // const closeDropdown = () => {
+  //   setIsDropdownOpen(false);
+  // };
 
   // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        closeDropdown();
-      }
-    };
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  //       closeDropdown();
+  //     }
+  //   };
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [dropdownRef]);
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, [dropdownRef]);
 
   return (
     <header className="sticky top-0 xxl:bg-white py-6 flex items-center px-4 sxl:px-20 bg-[#15508B] relative z-[50] shadow">
