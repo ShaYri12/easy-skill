@@ -1,7 +1,7 @@
 import React from "react";
-import Award1 from "../assets/icons/award1.svg";
-import Award2 from "../assets/icons/award2.svg";
-import Award3 from "../assets/icons/award3.svg";
+import Award1 from "../assets/icons/award1.png";
+import Award2 from "../assets/icons/award2.png";
+import Award3 from "../assets/icons/award3.png";
 
 const awardsData = [
   { id: 1, src: Award1, alt: "Award 1" },
