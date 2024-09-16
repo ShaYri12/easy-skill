@@ -127,7 +127,6 @@ const Hero = () => {
           <video
             ref={videoRef}
             src={Video}
-            controls={isPlaying} // Show controls only when playing
             className="rounded-lg object-cover w-full h-full cursor-pointer"
             onClick={handlePlayClick} // Click on video to toggle play/pause
           />
