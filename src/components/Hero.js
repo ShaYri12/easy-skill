@@ -1,19 +1,37 @@
-import React, { useState } from "react";
-import HeroImg from "../assets/hero-img.png";
+import React, { useRef, useState } from "react";
 import { HiMiniArrowRight } from "react-icons/hi2";
 import Line from "../assets/thankyou-line.svg";
 import G from "../assets/icons/G.svg";
 import Jd from "../assets/icons/jd.svg";
 import { FaStar } from "react-icons/fa6";
 import BookSeatModal from "./BookSeatModal";
+import Video from "../assets/janvi3.mov";
+import PlayBtn from "../assets/icons/play-btn.png";
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false); // Track if video is playing
+
+  // Toggle video play and pause
+  const handlePlayClick = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause(); // Pause video
+        setIsPlaying(false); // Update state to show overlay
+      } else {
+        videoRef.current.play(); // Play video
+        setIsPlaying(true); // Update state to hide overlay and show controls
+      }
+    }
+  };
+
   return (
     <section className="flex flex-col md:flex-row md:gap-[24px] items-center justify-between px-4 xxl:px-12 md:py-[56px] py-[16px] bg-white">
+      {/* Text and CTA Section */}
       <div className="w-full md:w-1/2 text-left md:order-1 order-2">
         <h3 className="text-[#15508B] md:text-[24px] text-[20px] font-[700] leading-[20px] mb-[12px] md:mt-0 mt-[16px] text-center">
           Join Us Today to Start Your
@@ -23,7 +41,6 @@ const Hero = () => {
             IT Learning
           </h1>
           <img className="md:w-[319px] w-[141px] mt-[3px]" src={Line} alt="" />
-
           <p className="text-[#15508B] md:text-[24px] text-[20px] leading-[20px] font-[700] md:mt-[11px] mt-[2px]">
             for Assured Earnings
           </p>
@@ -36,7 +53,6 @@ const Hero = () => {
           <p className="text-white tracking-[1.2%] font-[600] text-center lg:text-[16px] md:text-[1.7vw] leading-[12px] text-[12px] uppercase">
             get free career counseling from experts
           </p>
-
           <div className="flex items-center gap-1">
             <p className="text-white uppercase text-[18px] lg:text-[24px] md:text-[2.5vw] font-[700] leading-[20px] tracking-[1.2%]">
               Book YOUR SEAT Now
@@ -49,7 +65,6 @@ const Hero = () => {
           </div>
         </button>
 
-        {/* Modal component - conditionally rendered */}
         <BookSeatModal isOpen={isModalOpen} onClose={closeModal} />
 
         <p className="text-black opacity-[0.6] lg:text-[20px] md:text-[17px] text-[14px] md:leading-[27.32px] leading-[16px] font-[400] md:mt-[24px] mt-[20px]">
@@ -105,13 +120,30 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* Video and Play Button Section */}
       <div className="w-full md:order-2 order-1 md:w-1/2 mb-[16px] md:mb-0 flex justify-center">
         <div className="relative md:h-[454px] h-[473px] md:w-[473px] w-full">
-          <img
-            src={HeroImg}
-            alt="Video Placeholder"
-            className="rounded-lg object-cover w-full h-full"
+          {/* Video element with click event to toggle play/pause */}
+          <video
+            ref={videoRef}
+            src={Video}
+            controls={isPlaying} // Show controls only when playing
+            className="rounded-lg object-cover w-full h-full cursor-pointer"
+            onClick={handlePlayClick} // Click on video to toggle play/pause
           />
+
+          {/* Black overlay */}
+          {!isPlaying && (
+            <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg flex justify-center items-center transition-opacity duration-500 ease-in-out">
+              {/* Play button */}
+              <img
+                src={PlayBtn}
+                alt="Play Button"
+                className="cursor-pointer"
+                onClick={handlePlayClick} // Clicking the button also starts the video
+              />
+            </div>
+          )}
         </div>
       </div>
     </section>
